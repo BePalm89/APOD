@@ -1,36 +1,44 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { API_APOD } from "./api/apod";
 import "./App.css";
+import { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import ApodMars from "./pages/ApodMars/ApodMars";
+import Navbar from "./components/Navbar/Navbar";
+import Container from "./styled-components/Container";
+import Header from "./styled-components/Header";
+import Aside from "./styled-components/Aside";
+import Main from "./styled-components/Main";
+import Footer from "./styled-components/Footer";
+import LateralBar from "./components/LateralBar/LateralBar";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const NASA_URL = "https://api.nasa.gov/";
-  const NASA_API_KEY = "uftio8UFT6D5a0uoL1jN4R4gYcDkgRanjfvdJkuU";
+  const today = new Date(Date.now()).toISOString().slice(0, 10);
+
+  useEffect(() => {
+    API_APOD.get(
+      `apod?api_key=${import.meta.env.VITE_NASA_API_KEY}&date=2023-09-15`
+    ).then();
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Container>
+      <Header>
+        <Navbar></Navbar>
+      </Header>
+      <Aside>
+        <LateralBar></LateralBar>
+      </Aside>
+      <Main>
+        <Routes>
+          <Route path="" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/apod-mars" element={<ApodMars />}></Route>
+        </Routes>
+      </Main>
+      <Footer>footer</Footer>
+    </Container>
   );
 }
 

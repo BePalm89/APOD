@@ -1,0 +1,8 @@
+.lateral-nav-container {
+    font-family: var(--font-family-heading);
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}

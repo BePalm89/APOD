@@ -1,0 +1,16 @@
+.social-netwrok-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.icon {
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: all var(--animation-timing);
+}
+
+.icon:hover {
+    color: var(--primary);
+    transform: scale(1.5);
+}
