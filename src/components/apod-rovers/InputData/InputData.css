@@ -1,0 +1,16 @@
+input {
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+    padding-bottom: var(--padding-02);
+    outline: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+input:focus {
+    border-bottom: 1px solid var(--primary);
+}

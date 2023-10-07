@@ -4,9 +4,32 @@
   --secondary: #809CD5;
   --white: #FCF8EF;
   --black: #1E1825;
+
   --font-family-heading: 'Orbitron', sans-serif;
   --font-family-text: 'Roboto Slab', serif;
+
   --animation-timing: 200ms ease-in-out;
+  
+  --padding-02: 0.2rem;
+  --padding-05: 0.5rem;
+  --padding-1: 1rem;
+  --padding-15: 1.5rem;
+  --padding-2: 2rem;
+  --padding-3: 3rem;
+  --padding-4: 4rem;
+
+  --margin-05: 0.5rem;
+  --margin-1: 1rem;
+  --margin-15: 1.5rem;
+  --margin-2: 2rem;
+  --margin-3: 3rem;
+  --margin-4: 4rem;
+
+  --gap-05: 0.5rem;
+  --gap-1: 1rem;
+  --gap-2: 2rem;
+  --gap-3: 3rem;
+
 }
 
 * {
@@ -23,6 +46,7 @@ html, body{
   -o-background-size: cover;
   background-size: cover;
   font-family: var(--font-family-text);
+  color: var(--white);
 }
 
 a {
@@ -32,4 +56,12 @@ a {
 
 ul {
   list-style: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-family-heading);
+}
+
+p {
+  margin: 0;
 }

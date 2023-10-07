@@ -1,0 +1,13 @@
+.form-group {
+    text-align: left;
+    padding: 0 var(--padding-3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-3);
+}
+
+.card-container {
+    padding: var(--padding-2);
+    display: flex;
+    justify-content: center;
+}

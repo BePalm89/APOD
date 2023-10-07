@@ -1,14 +1,15 @@
 nav  ul{
     display: flex;
-    gap: 2rem;
-    padding: 1rem 3rem;
+    gap: var(--gap-2);
+    padding: var(--padding-1) var(--padding-3);
     justify-content: flex-end;
 	font-family: var(--font-family-heading);
 }
 
 nav ul li {
-    padding-bottom: 0.5rem;
+    padding-bottom: var(--padding-05);
     position: relative;
+	text-transform: uppercase;
 }
 
 
@@ -30,27 +31,20 @@ nav ul li {
 	background-color: var(--primary);
 	opacity: 0;
 	transition: opacity var(--animation-timing), transform var(--animation-timing);
-}
-
-.link:hover::after,
-.link:focus::after {
-	opacity: 1;
-	transform: translate3d(0, 0.2em, 0);
-}
-
-.link::after {
-	opacity: 1;
 	transform: scale(0);
 	transform-origin: center;
 }
 
-.link:hover::after,
-.link:focus::after{
+.link:hover::after{
+	opacity: 1;
+	transform: translate3d(0, 0.2em, 0);
 	transform: scale(1);
 }
 
+
 @media (max-width:650px) {
     nav ul {
-        justify-content: center;
+        justify-content: space-between;
+		padding: var(--padding-1) var(--padding-2);
     }
 }

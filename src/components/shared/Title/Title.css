@@ -1,0 +1,17 @@
+.title-page-container {
+    margin: var(--margin-3);
+    text-align: left;
+}
+
+.title-page {
+    text-transform: uppercase;
+    display: inline;
+    padding: 0 var(--padding-15) var(--padding-05) 0;
+    border-bottom: 1px solid var(--white);
+}
+
+@media (max-width: 650px) {
+    .title-page-container {
+        margin: var(--margin-3) var(--margin-2);
+    }
+}

@@ -1,7 +1,8 @@
 import React from "react";
 import "./LateralBar.css";
-import LateralText from "../shared/LateralText/LateralText";
-import SocialNetwrok from "../shared/SocialNetwork/SocialNetwrok";
+import LateralText from "../LateralText/LateralText";
+import SocialNetwrok from "../SocialNetwork/SocialNetwrok";
+import Flex from "../../../styled-components/Flex";
 
 const LateralBar = () => {
   return (

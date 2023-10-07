@@ -1,0 +1,11 @@
+
+.carousel-img {
+    width: 100%;
+}
+
+@media (max-width: 1224px) { 
+    .carousel-item {
+        flex: 1;
+    }
+
+}

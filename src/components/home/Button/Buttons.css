@@ -1,0 +1,10 @@
+.btn {
+    padding: var(--padding-05) var(--padding-2);
+    background-color: var(--primary-dark);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-family: inherit;
+    cursor: pointer;
+}

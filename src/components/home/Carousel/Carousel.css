@@ -1,0 +1,45 @@
+.carousel-container {
+    position: relative;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    border: solid 1px var(--primary);
+    background-color:  var(--white);
+}
+
+.indicator-group {
+    display: flex;
+    gap: var(--gap-05);
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: var(--primary);
+    border: none;
+}
+
+.carousel-container button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+.carousel {
+    display: flex;
+}
+
+@media (max-width: 1224px) { 
+    .carousel-container {
+        margin-top: var(--margin-2);
+        width: 100%;
+    }
+}

@@ -1,0 +1,12 @@
+select {
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+    padding-bottom: var(--padding-02);
+    outline: none;
+}
+
+select:focus {
+    border-bottom: 1px solid var(--primary);
+}

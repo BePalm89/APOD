@@ -1,0 +1,16 @@
+.api-descrption-container {
+    text-align: left;
+    padding: var(--padding-2) var(--padding-4);
+}
+
+.api-descrption-container p {
+    margin-top: var(--margin-2);
+    line-height: 1.5rem;
+    text-align: justify;
+}
+
+@media (max-width:650px) {
+    .api-descrption-container {
+        padding: var(--padding-2);
+    }
+}
